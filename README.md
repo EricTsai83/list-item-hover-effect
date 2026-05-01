@@ -6,7 +6,7 @@ The whole demo lives in **[`app/components/hover-list.tsx`](./app/components/hov
 
 ## Demo
 
-<video src="./assets/demo.mov" controls muted playsinline></video>
+![Demo](./assets/demo.gif)
 
 ## The three hover variants
 
