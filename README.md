@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# List-item hover effects
 
-## Getting Started
+A small demo project showing three CSS-only hover treatments for a row-list — `scan`, `brackets`, and `spotlight` — applied side-by-side so they can be compared at a glance.
 
-First, run the development server:
+The whole demo lives in **[`app/components/hover-list.tsx`](./app/components/hover-list.tsx)** — one file, top-to-bottom, from row data to the three hover variants. The reveal-on-scroll wrapper lives in [`app/components/reveal.tsx`](./app/components/reveal.tsx).
+
+## The three hover variants
+
+Each is a separate sub-component inside `hover-list.tsx`:
+
+| Variant | What it does |
+| --- | --- |
+| `ScanAccents` | A wash with a bright leading edge sweeps left→right across the row; two hairline tracers extend along the top and bottom edges in sync. Reads as "now reading this row". |
+| `BracketAccents` | Four corner brackets fan outward at rest, then snap inward on hover (with a back-easing overshoot) to frame the row content. The number + body shift inward at the same time, so the brackets read as a new frame the content has retreated inside. |
+| `SpotlightAccents` | A soft radial glow follows the cursor across the row via `--mx`/`--my` custom properties written by an `onMouseMove` handler. Two faint hairlines fade in to bound the row so the spotlight reads as a state, not ambient haze. |
+
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bun install
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js](https://nextjs.org) (App Router)
+- [Tailwind CSS v4](https://tailwindcss.com)
