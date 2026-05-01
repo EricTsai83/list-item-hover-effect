@@ -4,6 +4,10 @@ A small demo project showing three CSS-only hover treatments for a row-list — 
 
 The whole demo lives in **[`app/components/hover-list.tsx`](./app/components/hover-list.tsx)** — one file, top-to-bottom, from row data to the three hover variants. The reveal-on-scroll wrapper lives in [`app/components/reveal.tsx`](./app/components/reveal.tsx).
 
+## Demo
+
+<video src="./assets/demo.mov" controls muted playsinline></video>
+
 ## The three hover variants
 
 Each is a separate sub-component inside `hover-list.tsx`:
